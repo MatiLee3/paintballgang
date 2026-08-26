@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paintball Gang | Paintball i Integracje Firmowe – Gniewino, Pomorskie</title>
+<meta name="description" content="Paintball Gniewino, Reda, Wejherowo, Trójmiasto – gry taktyczne, integracje firmowe i wieczory kawalerskie. Paintball Gang, rezerwacja: 533 084 320.">
+<link rel="stylesheet" href="css/style.css?v=3">
+<script src="js/icons.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-deep text-gray-200 antialiased">
+
+<!-- SECTION: HEADER / NAVBAR -->
+<header id="header" class="fixed top-0 w-full z-50 bg-deep/80 backdrop-blur-md border-b border-navy-light/20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="#hero" class="font-display font-700 text-3xl tracking-wider text-white flex items-center gap-2">
+      <i data-lucide="crosshair" class="text-toxic w-7 h-7"></i>
+      PAINTBALL<span class="text-toxic">GANG</span>
+    </a>
+    <nav class="hidden xl:flex items-center gap-6 font-display font-600 text-base tracking-wide uppercase">
+      <a href="#o-nas" class="nav-link text-gray-300 hover:text-toxic transition-colors duration-300">O nas</a>
+      <a href="#tryby" class="nav-link text-gray-300 hover:text-toxic transition-colors duration-300">Tryby gry</a>
+      <a href="#cennik" class="nav-link text-gray-300 hover:text-toxic transition-colors duration-300">Brak cennika</a>
+      <a href="#galeria" class="nav-link text-gray-300 hover:text-toxic transition-colors duration-300">Galeria</a>
+      <a href="#faq" class="nav-link text-gray-300 hover:text-toxic transition-colors duration-300">FAQ</a>
+      <a href="#kontakt" class="nav-link text-gray-300 hover:text-toxic transition-colors duration-300">Kontakt</a>
+    </nav>
+    <a href="#rezerwacja" class="hidden xl:inline-flex items-center gap-2 bg-toxic text-black font-display font-700 text-base uppercase tracking-wide px-6 py-3 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-glow">
+      <i data-lucide="target" class="w-4 h-4"></i> Rezerwuj Grę
+    </a>
+    <button id="menu-btn" class="xl:hidden text-white" aria-label="Otwórz menu">
+      <i data-lucide="menu" class="w-8 h-8"></i>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden xl:hidden bg-panel border-t border-navy-light/20 px-6 py-6 space-y-4 font-display font-600 uppercase tracking-wide">
+    <a href="#o-nas" class="block text-gray-300 hover:text-toxic transition-colors duration-300">O nas</a>
+    <a href="#tryby" class="block text-gray-300 hover:text-toxic transition-colors duration-300">Tryby gry</a>
+    <a href="#cennik" class="block text-gray-300 hover:text-toxic transition-colors duration-300">Brak cennika</a>
+    <a href="#galeria" class="block text-gray-300 hover:text-toxic transition-colors duration-300">Galeria</a>
+    <a href="#faq" class="block text-gray-300 hover:text-toxic transition-colors duration-300">FAQ</a>
+    <a href="#kontakt" class="block text-gray-300 hover:text-toxic transition-colors duration-300">Kontakt</a>
+    <a href="#rezerwacja" class="block bg-toxic text-black text-center font-700 px-6 py-3 rounded-full mt-2">Rezerwuj Grę</a>
+  </div>
+</header>
+
+<!-- SECTION: HERO -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden diagonal-stripe pt-36">
+  <div class="absolute inset-0 z-0">
+    <img src="assets/photos/Truk.jpg" alt="Gracz paintball w akcji na taktycznej arenie" class="w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-deep via-deep/80 to-deep/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-deep/90 via-transparent to-deep/90"></div>
+  </div>
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+    <span class="inline-block font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl mb-6 border border-toxic/40 px-4 py-2 rounded-full">
+      1,5 hektara • Arena starej jednostki wojskowej • Otwarte cały rok
+    </span>
+    <h1 class="font-display font-700 text-5xl sm:text-6xl lg:text-8xl text-white leading-[0.95] mb-6 uppercase">
+      Wejdź na pole.<br><span class="text-toxic drop-shadow-[0_0_25px_rgba(57,255,20,0.5)]">Wyjdź zwycięzcą.</span>
+    </h1>
+    <p class="text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Arena na terenie starej jednostki wojskowej — pole namiotowe, miejsce na ognisko, wiata,
+      namioty wojskowe do wypożyczenia, strzelnica dla dzieci i przejażdżki pojazdami wojskowymi.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#rezerwacja" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-toxic text-black font-display font-700 text-lg uppercase tracking-wide px-10 py-4 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-lg">
+        <i data-lucide="calendar-check" class="w-5 h-5"></i> Zarezerwuj Termin
+      </a>
+      <a href="#tryby" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-display font-700 text-lg uppercase tracking-wide px-10 py-4 rounded-full transition-all duration-300 hover:scale-[1.02] hover:border-toxic hover:text-toxic">
+        <i data-lucide="play" class="w-5 h-5"></i> Zobacz Tryby Gry
+      </a>
+    </div>
+    <div class="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto border-t border-navy-light/30 pt-8">
+      <div><p class="font-display font-700 text-3xl lg:text-6xl text-toxic">12 lat</p><p class="text-2xl uppercase tracking-wider text-gray-400 mt-1">Na rynku</p></div>
+	  <div><p class="font-display font-700 text-3xl lg:text-4xl text-toxic"></p><p class="text-xs uppercase tracking-wider text-gray-400 mt-1"></p></div>
+      <div><p class="font-display font-700 text-3xl lg:text-6xl text-toxic">4.8/5</p><p class="text-2xl uppercase tracking-wider text-gray-400 mt-1">Ocena graczy</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: O NAS & DLACZEGO MY -->
+<section id="o-nas" class="py-24 bg-panel relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Kim jesteśmy</span>
+          <h2 class="font-display font-700 text-4xl lg:text-5xl text-white uppercase mt-3 mb-6 leading-tight">dlaczego<br>nas wybierają</h2>
+          <p class="text-gray-400 leading-relaxed mb-6">
+            U nas paintball to nie tylko czysta adrenalina — to też świetny sposób na wspólnie
+            spędzony czas. Organizujemy imprezy firmowe, wycieczki szkolne i wakacyjne przygody
+            dla całych rodzin, więc niezależnie od tego, czy szukacie mocnych wrażeń, czy po
+            prostu miłego dnia razem — trafiliście we właściwe miejsce. Działamy tak od 12 lat.
+          </p>
+          <div class="space-y-5">
+            <div class="flex gap-4 items-start">
+              <div class="bg-toxic/10 border border-toxic/30 rounded-lg p-3 shrink-0">
+                <i data-lucide="shield-check" class="w-6 h-6 text-toxic"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-700 text-white text-lg uppercase">Bezpieczeństwo przede wszystkim</h3>
+                <p class="text-gray-400 text-sm mt-1">Certyfikowane maski ochronne, wygodne kombinezony i stały nadzór sędziego z wieloletnim doświadczeniem — u nas bawią się bezpiecznie i dzieci, i dorośli.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="bg-olive/10 border border-olive/30 rounded-lg p-3 shrink-0">
+                <i data-lucide="land-plot" class="w-6 h-6 text-olive"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-700 text-white text-lg uppercase">Autentyczny teren gry</h3>
+                <p class="text-gray-400 text-sm mt-1">Gramy na naturalnym terenie dawnej jednostki wojskowej — wzniesienia, zarośla i przygotowane osłony sprawiają, że każda rozgrywka wygląda i czuje się inaczej.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="bg-navy/20 border border-navy-light/40 rounded-lg p-3 shrink-0">
+                <i data-lucide="flame-kindling" class="w-6 h-6 text-navy-light"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-700 text-white text-lg uppercase">Grill i ognisko</h3>
+                <p class="text-gray-400 text-sm mt-1">Organizujemy grilla lub ognisko z prowiantem — świetne zwieńczenie dnia pełnego wrażeń, czy to w gronie rodziny, czy całej firmy.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="bg-toxic/10 border border-toxic/30 rounded-lg p-3 shrink-0">
+                <i data-lucide="axe" class="w-6 h-6 text-toxic"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-700 text-white text-lg uppercase">Sprzęt i scenariusze</h3>
+                <p class="text-gray-400 text-sm mt-1">Sprzęt marki Tippmann (modele BT4 i SW1), różnorodne scenariusze gry i adrenalina, której nie zapomnisz.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="bg-olive/10 border border-olive/30 rounded-lg p-3 shrink-0">
+                <i data-lucide="tent-tree" class="w-6 h-6 text-olive"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-700 text-white text-lg uppercase">Namioty i nocleg</h3>
+                <p class="text-gray-400 text-sm mt-1">Można u nas wypożyczyć namioty i zostać na noc na terenie dawnej jednostki wojskowej, w otoczeniu bunkra i przyrody — dla tych, którzy chcą przedłużyć przygodę.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="assets/photos/Ekipa.jpg" alt="Ekipa Paintball Gang przygotowująca sprzęt przed grą" class="rounded-xl w-full h-[550px] object-cover">
+          <div class="absolute -bottom-6 -left-6 bg-panel-light border border-toxic/30 backdrop-blur-md rounded-xl p-6 shadow-glow max-w-xs">
+            <p class="font-display font-700 text-2xl text-toxic">100% Ochrony</p>
+            <p class="text-sm text-gray-400 mt-1">Pełne ubezpieczenie NNW dla każdego uczestnika gry.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SECTION: TRYBY GRY -->
+<section id="tryby" class="py-24 bg-deep diagonal-stripe">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Wybierz swoją misję</span>
+      <h2 class="font-display font-700 text-4xl lg:text-5xl text-white uppercase mt-3">Tryby Gry</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="group relative rounded-xl overflow-hidden h-96 transition-all duration-300 hover:scale-[1.02] hover:shadow-glow">
+        <img src="assets/photos/Tank.jpg" alt="Pojazd wojskowy na arenie scenariuszowej" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 p-6">
+          <span class="text-2xl font-display font-600 text-toxic uppercase tracking-widest">Tryb 01</span>
+          <h3 class="font-display font-700 text-2xl text-white uppercase mt-1">Scenariusze</h3>
+          <p class="text-gray-300 text-sm mt-2 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-300">Misje fabularne — przejęcie flagi, obrona bazy, eskorta VIP. Wymagają strategii zespołowej.</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="group relative rounded-xl overflow-hidden h-96 transition-all duration-300 hover:scale-[1.02] hover:shadow-glow">
+        <img src="assets/photos/Mud.jpg" alt="Błotnista arena do gry Deathmatch" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 p-6">
+          <span class="text-2xl font-display font-600 text-toxic uppercase tracking-widest">Tryb 02</span>
+          <h3 class="font-display font-700 text-2xl text-white uppercase mt-1">Deathmatch</h3>
+          <p class="text-gray-300 text-sm mt-2 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-300">Szybka, intensywna akcja bez przerwy. Każdy na własną rękę — liczy się refleks i celność.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="group relative rounded-xl overflow-hidden h-96 transition-all duration-300 hover:scale-[1.02] hover:shadow-glow">
+        <img src="assets/photos/Cars.jpg" alt="Grupa na wieczorze kawalerskim w Paintball Gang" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute bottom-0 p-6">
+          <span class="text-2xl font-display font-600 text-toxic uppercase tracking-widest">Tryb 03</span>
+          <h3 class="font-display font-700 text-2xl text-white uppercase mt-1">Wieczory Kawalerskie</h3>
+          <p class="text-gray-300 text-sm mt-2 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-300">Pakiety specjalne dla ekip — transport, grill i pamiątkowe zdjęcia w gratisie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: CENNIK -->
+<section id="cennik" class="py-24 bg-panel">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
+    <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Wycena indywidualna</span>
+    <h2 class="font-display font-700 text-4xl lg:text-5xl text-white uppercase mt-3 mb-6">Brak cennika</h2>
+    <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto mb-10">
+      Każda grupa i każde wydarzenie są inne, dlatego nie publikujemy sztywnego cennika — wycenę
+      przygotowujemy indywidualnie, dopasowaną do liczby graczy i długości gry. Zadzwoń, a od razu
+      powiemy Ci, ile to będzie kosztować.
+    </p>
+    <a href="#rezerwacja" class="inline-flex items-center justify-center gap-2 bg-toxic text-black font-display font-700 text-lg uppercase tracking-wide px-10 py-4 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-lg">
+      <i data-lucide="phone" class="w-5 h-5"></i> Zadzwoń po wycenę
+    </a>
+  </div>
+</section>
+
+<!-- SECTION: GALERIA -->
+<section id="galeria" class="py-24 bg-deep">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Z pola bitwy</span>
+      <h2 class="font-display font-700 text-4xl lg:text-5xl text-white uppercase mt-3">Galeria</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Teren Paintball Gang z pojazdami terenowymi">
+        <img src="assets/photos/Cars2.jpg" alt="Teren Paintball Gang z pojazdami terenowymi" class="w-full h-full object-cover">
+      </div>
+      <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Błotnisty teren areny paintballowej">
+        <img src="assets/photos/Mud.jpg" alt="Błotnisty teren areny paintballowej" class="w-full h-full object-cover">
+      </div>
+      <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Ekipa Paintball Gang gotowa do gry">
+        <img src="assets/photos/Ekipa.jpg" alt="Ekipa Paintball Gang gotowa do gry" class="w-full h-full object-cover">
+      </div>
+      <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Pojazd wojskowy na terenie Paintball Gang">
+        <img src="assets/photos/Tank.jpg" alt="Pojazd wojskowy na terenie Paintball Gang" class="w-full h-full object-cover">
+      </div>
+      <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Pojazdy terenowe na polu paintball">
+        <img src="assets/photos/Cars.jpg" alt="Pojazdy terenowe na polu paintball" class="w-full h-full object-cover">
+      </div>
+      <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Ciężarówka wojskowa jako przeszkoda na arenie">
+        <img src="assets/photos/Truk.jpg" alt="Ciężarówka wojskowa jako przeszkoda na arenie" class="w-full h-full object-cover">
+      </div>
+      <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Pojazdy na terenie areny Paintball Gang">
+        <img src="assets/photos/Cars2.jpg" alt="Pojazdy na terenie areny Paintball Gang" class="w-full h-full object-cover">
+      </div>
+      <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Błotnisty teren o zmierzchu na arenie">
+        <img src="assets/photos/Mud.jpg" alt="Błotnisty teren o zmierzchu na arenie" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: OPINIE & FAQ -->
+<section id="faq" class="py-24 bg-panel">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
+    <!-- Opinie -->
+    <div>
+      <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Głos graczy</span>
+      <h2 class="font-display font-700 text-4xl text-white uppercase mt-3 mb-8">Opinie</h2>
+      <div class="space-y-6">
+        <div class="bg-panel-light border border-white/10 rounded-xl p-6">
+          <div class="flex gap-1 text-toxic mb-3">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed">„Fantastyczne miejsce na wspólny wypad z rodziną lub znajomymi. Cały dzień atrakcji o które dba właściciel. Ognisko i kiełbaski, potem Paintball, przejażdżki zabytkowymi pojazdami. Polecam to miejsce i na pewno tam wrócę."</p>
+          <p class="font-display font-700 text-white text-sm mt-4">Agnieszka</p>
+        </div>
+        <div class="bg-panel-light border border-white/10 rounded-xl p-6">
+          <div class="flex gap-1 text-toxic mb-3">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed">„Bardzo polecam to miejsce! Super organizacja i mnóstwo atrakcji"</p>
+          <p class="font-display font-700 text-white text-sm mt-4">Alicja</p>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ Accordion -->
+    <div>
+      <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Masz pytania?</span>
+      <h2 class="font-display font-700 text-4xl text-white uppercase mt-3 mb-8">FAQ</h2>
+      <div class="space-y-4" id="faq-accordion">
+        <div class="faq-item border border-white/10 rounded-xl overflow-hidden bg-panel-light">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 text-left font-display font-700 text-white uppercase tracking-wide">
+            Czy boli trafienie kulką?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-toxic transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed">Trafienie odczuwalne jest jako krótkie, chłodne uderzenie — porównywalne do klapsa gumką recepturką. Grubszy kombinezon znacznie redukuje odczucie.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-white/10 rounded-xl overflow-hidden bg-panel-light">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 text-left font-display font-700 text-white uppercase tracking-wide">
+            Od ilu lat można grać?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-toxic transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed">Zapraszamy graczy od 12 roku życia. Osoby niepełnoletnie wymagają pisemnej zgody opiekuna prawnego obecnego na miejscu lub podpisanej wcześniej.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-white/10 rounded-xl overflow-hidden bg-panel-light">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 text-left font-display font-700 text-white uppercase tracking-wide">
+            Co powinienem zabrać ze sobą?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-toxic transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed">Wygodne, sportowe obuwie zakrywające kostkę oraz ubranie, którego nie szkoda pobrudzić. Resztę sprzętu — maskę, kombinezon i marker — zapewniamy na miejscu.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-white/10 rounded-xl overflow-hidden bg-panel-light">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 text-left font-display font-700 text-white uppercase tracking-wide">
+            Czy gracie niezależnie od pogody?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-toxic transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed">Tak, gramy w każdych warunkach pogodowych — deszcz i błoto to część klimatu areny. Grę odwołujemy jedynie w przypadku burz z wyładowaniami atmosferycznymi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: FORMULARZ REZERWACJI & KONTAKT -->
+<section id="rezerwacja" class="py-24 bg-deep diagonal-stripe">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Nie czekaj</span>
+      <h2 class="font-display font-700 text-4xl lg:text-5xl text-white uppercase mt-3">Kontakt</h2>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-10 mb-10">
+      <!-- Contact Info (biuro) -->
+      <div class="bg-panel-light border border-white/10 rounded-xl p-8 space-y-5">
+        <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-sm">Informacje o firmie</span>
+        <div class="flex gap-4 items-start">
+          <i data-lucide="map-pin" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
+          <div>
+            <p class="font-display font-700 text-white uppercase text-base">Adres</p>
+            <p class="text-gray-400 text-base">Pomorska 63, 84-250 Gniewino</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <i data-lucide="phone" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
+          <div>
+            <p class="font-display font-700 text-white uppercase text-base">Telefon</p>
+            <p class="text-gray-400 text-base">+48 533 084 320</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <i data-lucide="clock" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
+          <div>
+            <p class="font-display font-700 text-white uppercase text-base">Godziny otwarcia</p>
+            <p class="text-gray-400 text-base">Pon–Ndz: 9:00–20:00</p>
+          </div>
+        </div>
+        <a href="tel:+48533084320" class="w-full inline-flex items-center justify-center gap-2 bg-toxic text-black font-display font-700 text-lg uppercase tracking-wide py-4 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-lg">
+          <i data-lucide="phone" class="w-5 h-5"></i> Zadzwoń Teraz
+        </a>
+      </div>
+      <!-- Map (biuro) -->
+      <div class="rounded-xl overflow-hidden border border-white/10 h-64 lg:h-auto">
+        <iframe title="Mapa - informacje o firmie Paintball Gang" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2778.7211965583206!2d18.02204197726761!3d54.71669297271833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fdc94ded7453af%3A0xc4565c910499dcf5!2sPaintball%20Gang%20Micha%C5%82%20Treder!5e1!3m2!1sen!2spl!4v1787597794218!5m2!1sen!2spl" class="w-full h-full grayscale contrast-[1.05] opacity-90" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-10">
+      <!-- Contact Info (dojazd do pola) -->
+      <div class="bg-panel-light border border-white/10 rounded-xl p-8 space-y-5">
+        <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-sm">Dojazd do pola gry</span>
+        <div class="flex gap-4 items-start">
+          <i data-lucide="map-pin" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
+          <div>
+            <p class="font-display font-700 text-white uppercase text-base">Adres pola paintball</p>
+            <p class="text-gray-400 text-base">Lisewo 28, 84-250 Gniewino</p>
+          </div>
+        </div>
+        <p class="text-gray-400 text-base leading-relaxed">
+          Sama gra odbywa się na terenie dawnego poligonu wojskowego w Lisewie —
+          to inny adres niż biuro. Nawiguj bezpośrednio na Lisewo 28, żeby trafić na miejsce gry.
+        </p>
+      </div>
+      <!-- Map (dojazd do pola) -->
+      <div class="rounded-xl overflow-hidden border border-white/10 h-64 lg:h-auto">
+        <iframe title="Mapa dojazdu do pola paintball, Lisewo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2779.8464124561783!2d18.030511977266833!3d54.70027397271289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fdc9006b4bc94d%3A0x142dd2a48e4e762d!2sLetni%20Piknik%20Militarny%20%2F%20Lisewo!5e1!3m2!1sen!2spl!4v1787597701986!5m2!1sen!2spl" class="w-full h-full grayscale contrast-[1.05] opacity-90" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: FOOTER -->
+<footer class="bg-panel border-t border-white/10 py-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="font-display font-700 text-xl text-white flex items-center gap-2">
+      <i data-lucide="crosshair" class="text-toxic w-6 h-6"></i>
+      PAINTBALL<span class="text-toxic">GANG</span>
+    </div>
+    <div class="flex gap-5">
+      <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-toxic transition-colors duration-300"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+      <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-toxic transition-colors duration-300"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+      <a href="#" aria-label="Youtube" class="text-gray-400 hover:text-toxic transition-colors duration-300"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+    </div>
+  </div>
+  <p class="text-center text-xs text-gray-600 mt-8">&copy; 2026 Paintball Gang. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
+<!-- LIGHTBOX GALERII -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button id="lightboxClose" class="lightbox__close" aria-label="Zamknij powiększone zdjęcie">
+    <i data-lucide="x" class="w-6 h-6"></i>
+  </button>
+  <img id="lightboxImg" class="lightbox__img" src="" alt="">
+  <p id="lightboxCaption" class="lightbox__caption"></p>
+</div>
+
+<script>
+  lucide.createIcons();
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+  });
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const content = trigger.nextElementSibling;
+      const icon = trigger.querySelector('.faq-icon');
+      const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+      document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = '0px');
+      document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Active nav link highlight via Intersection Observer
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${entry.target.id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+  sections.forEach(section => observer.observe(section));
+
+  // Lightbox galerii — hover na komputerze, klik na urządzeniach dotykowych
+  (function () {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const canHover = window.matchMedia('(hover: hover)').matches;
+
+    function openLightbox(item, interactive) {
+      const img = item.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCaption.textContent = item.dataset.caption || img.alt;
+      lightbox.classList.toggle('lightbox--interactive', interactive);
+      lightbox.classList.add('is-active');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-active');
+      lightbox.setAttribute('aria-hidden', 'true');
+    }
+
+    galleryItems.forEach(item => {
+      if (canHover) {
+        // Komputer: podgląd na najechanie, nakładka nie przechwytuje kursora (pointer-events: none),
+        // więc mouseleave odpala się poprawnie z prawdziwej miniaturki, bez migania.
+        item.addEventListener('mouseenter', () => openLightbox(item, false));
+        item.addEventListener('mouseleave', closeLightbox);
+      } else {
+        // Dotyk: brak hover, więc otwieramy na styk i zostaje otwarte do ręcznego zamknięcia.
+        item.addEventListener('click', () => openLightbox(item, true));
+      }
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  })();
+</script>
+</body>
+
+</html>
