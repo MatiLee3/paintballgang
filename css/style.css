@@ -21,7 +21,7 @@ section[id] { scroll-margin-top: 88px; }
 ::-webkit-scrollbar-thumb { background: #39FF14; border-radius: 4px; }
 
 /* --- KOMPONENTY WŁASNE (przeniesione z <style> w index.html) --- */
-.font-display { font-family: 'Rajdhani', sans-serif; }
+.font-display { font-family: 'Oswald', 'Arial Narrow', sans-serif; }
 .font-body { font-family: 'Inter', sans-serif; }
 
 .nav-link { position: relative; }
@@ -75,7 +75,7 @@ section[id] { scroll-margin-top: 88px; }
 }
 .lightbox__caption {
   color: #fff;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   text-align: center;
@@ -346,3 +346,81 @@ section[id] { scroll-margin-top: 88px; }
   .xl\:hidden { display: none; }
   .xl\:inline-flex { display: inline-flex; }
 }
+
+/* --- PASEK INFORMACYJNY W HERO: zawsze w jednej linii --- */
+.hero-badge {
+  white-space: nowrap;
+  font-size: clamp(0.32rem, 1.8vw, 1.25rem);
+  letter-spacing: 0.06em;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+@media (min-width: 768px) {
+  .hero-badge { letter-spacing: 0.15em; padding-left: 1rem; padding-right: 1rem; }
+}
+/* ============================================================
+   POPRAWKI RESPONSYWNE — audyt na 13 rozdzielczościach
+   (patrz tabela w odpowiedzi). Każda reguła odpowiada 1:1
+   za jeden zmierzony, potwierdzony problem.
+================================================================ */
+
+/* Logo w headerze: BUG — kolidowało z przyciskiem hamburgera na 320px.
+   Bez zmian od ~500px w górę (clamp osiąga sufit 1.875rem = stare text-3xl). */
+.nav-brand {
+  font-size: clamp(1rem, 5.2vw, 1.875rem);
+  padding-block: 0.5rem;
+  margin-block: -0.5rem;
+}
+
+/* Przycisk hamburgera: BUG — realny obszar dotykowy ok. 32×40px (<44px).
+   Ujemny margines kompensuje padding, więc ikona nie zmienia pozycji. */
+#menu-btn { padding: 0.5rem; margin: -0.5rem; }
+
+/* Marka "Paintball Gang" i H1 hero: BUG — tekst ucinany (clip przez
+   overflow-hidden sekcji) na 320–360px przy stałym text-5xl (48px).
+   Od 640px i 1024px wartości identyczne co dawne sm:/lg: — zero zmian
+   na tabletach/desktopie. */
+.hero-brand, .hero-title {
+  font-size: clamp(1.9rem, 11vw, 3rem);
+  line-height: 0.95;
+}
+@media (min-width: 640px) { .hero-brand, .hero-title { font-size: 3.75rem; } }
+@media (min-width: 1024px) { .hero-brand, .hero-title { font-size: 6rem; } }
+
+/* Etykiety statystyk hero ("Na rynku" / "Ocena graczy"): BUG — text-2xl
+   (24px) łamał się na 2–3 linie w wąskiej kolumnie grid-cols-3 na
+   telefonach (do 412px). Sufit 1.5rem = stare text-2xl, więc od ok.
+   800px (tablet/desktop) wygląd identyczny jak wcześniej. */
+.hero-stat-label { font-size: clamp(0.75rem, 3vw, 1.5rem); }
+
+/* Nagłówek sekcji Galeria: BUG realny — text-6xl (60px) powodował
+   poziomy scroll całej strony na wszystkich szerokościach ≤412px
+   (sekcja Galeria nie ma overflow-hidden, więc scroll uciekał na
+   poziom strony). Ujednolicone z rozmiarem pozostałych H2 (Tryby Gry,
+   FAQ, Kontakt: text-4xl / lg:text-5xl). */
+.galeria-heading { font-size: 2.25rem; }
+@media (min-width: 1024px) { .galeria-heading { font-size: 3rem; } }
+
+/* Przycisk zamknięcia lightboxa: BUG — ok. 43×51px, tuż poniżej 44px
+   minimum. */
+.lightbox__close { padding: 0.7rem; }
+
+/* Kickery sekcji (7 wystąpień: Kim jesteśmy, Wybierz swoją misję,
+   Wycena indywidualna, Głos graczy, Masz pytania?, Nie czekaj):
+   BUG realny — tracking-[0.3em] przy 30px, przy długim pojedynczym
+   słowie ("indywidualna") bez możliwości złamania wiersza,
+   wychodziło poza ekran na ≤412px. Selektor łączony (oba warunki
+   naraz), więc "100% Ochrony" (text-3xl bez tracking-[0.3em])
+   zostaje bez zmian. Pełne tracking wraca od 640px, gdy jest miejsce. */
+.tracking-\[0\.3em\].text-3xl {
+  font-size: clamp(1.05rem, 5.5vw, 1.875rem);
+  letter-spacing: 0.15em;
+}
+@media (min-width: 640px) {
+  .tracking-\[0\.3em\].text-3xl { letter-spacing: 0.3em; }
+}
+
+/* Linki w rozwijanym menu mobilnym: BUG — ok. 25px wysokości (<44px).
+   Menu jest ukryte na desktopie (xl:hidden), więc to nie dotyka
+   zastrzeżonego wyglądu desktopowego. */
+#mobile-menu a { display: block; padding-block: 0.6rem; }
