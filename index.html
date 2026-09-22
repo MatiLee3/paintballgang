@@ -8,14 +8,14 @@
 <link rel="stylesheet" href="css/style.css?v=3">
 <script src="js/icons.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-deep text-gray-200 antialiased">
 
 <!-- SECTION: HEADER / NAVBAR -->
 <header id="header" class="fixed top-0 w-full z-50 bg-deep/80 backdrop-blur-md border-b border-navy-light/20">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
-    <a href="#hero" class="font-display font-700 text-3xl tracking-wider text-white flex items-center gap-2">
+    <a href="#hero" class="nav-brand font-display font-700 tracking-wider text-white flex items-center gap-2">
       <i data-lucide="crosshair" class="text-toxic w-7 h-7"></i>
       PAINTBALL<span class="text-toxic">GANG</span>
     </a>
@@ -54,15 +54,18 @@
     <div class="absolute inset-0 bg-gradient-to-r from-deep/90 via-transparent to-deep/90"></div>
   </div>
   <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-    <span class="inline-block font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl mb-6 border border-toxic/40 px-4 py-2 rounded-full">
-      1,5 hektara • Arena starej jednostki wojskowej • Otwarte cały rok
+    <span class="hero-badge inline-block font-display font-600 text-toxic uppercase mb-6 border-2 border-toxic/40 py-2 rounded-full">
+      1,5 hektara • Teren starej jednostki wojskowej • Otwarte cały rok
     </span>
-    <h1 class="font-display font-700 text-5xl sm:text-6xl lg:text-8xl text-white leading-[0.95] mb-6 uppercase">
-      Wejdź na pole.<br><span class="text-toxic drop-shadow-[0_0_25px_rgba(57,255,20,0.5)]">Wyjdź zwycięzcą.</span>
+    <p class="hero-brand font-display font-700 text-white drop-shadow-[0_0_25px_rgba(57,255,20,0.5)] uppercase mb-6">
+      Paintball Gang
+    </p>
+    <h1 class="hero-title font-display font-700 text-white mb-6 uppercase">
+      Wejdź na pole<br><span class="text-toxic drop-shadow-[0_0_25px_rgba(57,255,20,0.5)]">NIE GRASZ PRZEGRYWASZ</span>
     </h1>
-    <p class="text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-      Arena na terenie starej jednostki wojskowej — pole namiotowe, miejsce na ognisko, wiata,
-      namioty wojskowe do wypożyczenia, strzelnica dla dzieci i przejażdżki pojazdami wojskowymi.
+    <p class="text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+      Teren starej jednostki wojskowej — pole namiotowe, miejsce na ognisko, wiata,
+      namioty wojskowe do wypożyczenia, strzelnica dla dzieci i przejażdżki pojazdami wojskowymi oraz gąsienicowymi.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="#rezerwacja" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-toxic text-black font-display font-700 text-lg uppercase tracking-wide px-10 py-4 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-lg">
@@ -73,9 +76,9 @@
       </a>
     </div>
     <div class="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto border-t border-navy-light/30 pt-8">
-      <div><p class="font-display font-700 text-3xl lg:text-6xl text-toxic">12 lat</p><p class="text-2xl uppercase tracking-wider text-gray-400 mt-1">Na rynku</p></div>
+      <div><p class="font-display font-700 text-3xl lg:text-6xl text-toxic">12 lat</p><p class="hero-stat-label uppercase tracking-wider text-gray-400 mt-1">Na rynku</p></div>
 	  <div><p class="font-display font-700 text-3xl lg:text-4xl text-toxic"></p><p class="text-xs uppercase tracking-wider text-gray-400 mt-1"></p></div>
-      <div><p class="font-display font-700 text-3xl lg:text-6xl text-toxic">4.8/5</p><p class="text-2xl uppercase tracking-wider text-gray-400 mt-1">Ocena graczy</p></div>
+      <div><p class="font-display font-700 text-3xl lg:text-6xl text-toxic">4.8/5</p><p class="hero-stat-label uppercase tracking-wider text-gray-400 mt-1">Ocena graczy</p></div>
     </div>
   </div>
 </section>
@@ -109,7 +112,7 @@
               </div>
               <div>
                 <h3 class="font-display font-700 text-white text-lg uppercase">Autentyczny teren gry</h3>
-                <p class="text-gray-400 text-sm mt-1">Gramy na naturalnym terenie dawnej jednostki wojskowej — wzniesienia, zarośla i przygotowane osłony sprawiają, że każda rozgrywka wygląda i czuje się inaczej.</p>
+                <p class="text-gray-400 text-sm mt-1">Gramy na naturalnym terenie dawnej jednostki wojskowej — wzniesienia, zarośla i przygotowane osłony sprawiają, że każda rozgrywka wygląda inaczej.</p>
               </div>
             </div>
             <div class="flex gap-4 items-start">
@@ -117,8 +120,8 @@
                 <i data-lucide="flame-kindling" class="w-6 h-6 text-navy-light"></i>
               </div>
               <div>
-                <h3 class="font-display font-700 text-white text-lg uppercase">Grill i ognisko</h3>
-                <p class="text-gray-400 text-sm mt-1">Organizujemy grilla lub ognisko z prowiantem — świetne zwieńczenie dnia pełnego wrażeń, czy to w gronie rodziny, czy całej firmy.</p>
+                <h3 class="font-display font-700 text-white text-lg uppercase">Ognisko</h3>
+                <p class="text-gray-400 text-sm mt-1">Organizujemy ognisko z prowiantem — świetne zwieńczenie dnia pełnego wrażeń, czy to w gronie rodziny, czy całej firmy.</p>
               </div>
             </div>
             <div class="flex gap-4 items-start">
@@ -127,7 +130,7 @@
               </div>
               <div>
                 <h3 class="font-display font-700 text-white text-lg uppercase">Sprzęt i scenariusze</h3>
-                <p class="text-gray-400 text-sm mt-1">Sprzęt marki Tippmann (modele BT4 i SW1), różnorodne scenariusze gry i adrenalina, której nie zapomnisz.</p>
+                <p class="text-gray-400 text-sm mt-1">Sprzęt marki Tippmann, BT i SW1, różnorodne scenariusze gry i adrenalina, której nie zapomnisz.</p>
               </div>
             </div>
             <div class="flex gap-4 items-start">
@@ -144,8 +147,7 @@
         <div class="relative">
           <img src="assets/photos/Ekipa.jpg" alt="Ekipa Paintball Gang przygotowująca sprzęt przed grą" class="rounded-xl w-full h-[550px] object-cover">
           <div class="absolute -bottom-6 -left-6 bg-panel-light border border-toxic/30 backdrop-blur-md rounded-xl p-6 shadow-glow max-w-xs">
-            <p class="font-display font-700 text-2xl text-toxic">100% Ochrony</p>
-            <p class="text-sm text-gray-400 mt-1">Pełne ubezpieczenie NNW dla każdego uczestnika gry.</p>
+            <p class="font-display font-700 text-3xl text-toxic">100% Ochrony</p>
           </div>
         </div>
       </div>
@@ -214,8 +216,7 @@
 <section id="galeria" class="py-24 bg-deep">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center mb-16">
-      <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Z pola bitwy</span>
-      <h2 class="font-display font-700 text-4xl lg:text-5xl text-white uppercase mt-3">Galeria</h2>
+      <span class="galeria-heading font-display font-600 text-toxic tracking-[0.3em] uppercase">Galeria</span>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div class="gallery-item rounded-lg overflow-hidden h-64 cursor-pointer" data-caption="Teren Paintball Gang z pojazdami terenowymi">
@@ -323,57 +324,54 @@
       <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-3xl">Nie czekaj</span>
       <h2 class="font-display font-700 text-4xl lg:text-5xl text-white uppercase mt-3">Kontakt</h2>
     </div>
-    <div class="grid lg:grid-cols-2 gap-10 mb-10">
-      <!-- Contact Info (biuro) -->
-      <div class="bg-panel-light border border-white/10 rounded-xl p-8 space-y-5">
-        <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-sm">Informacje o firmie</span>
-        <div class="flex gap-4 items-start">
-          <i data-lucide="map-pin" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
-          <div>
-            <p class="font-display font-700 text-white uppercase text-base">Adres</p>
-            <p class="text-gray-400 text-base">Pomorska 63, 84-250 Gniewino</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <i data-lucide="phone" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
-          <div>
-            <p class="font-display font-700 text-white uppercase text-base">Telefon</p>
-            <p class="text-gray-400 text-base">+48 533 084 320</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <i data-lucide="clock" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
-          <div>
-            <p class="font-display font-700 text-white uppercase text-base">Godziny otwarcia</p>
-            <p class="text-gray-400 text-base">Pon–Ndz: 9:00–20:00</p>
-          </div>
-        </div>
-        <a href="tel:+48533084320" class="w-full inline-flex items-center justify-center gap-2 bg-toxic text-black font-display font-700 text-lg uppercase tracking-wide py-4 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-lg">
-          <i data-lucide="phone" class="w-5 h-5"></i> Zadzwoń Teraz
-        </a>
-      </div>
-      <!-- Map (biuro) -->
-      <div class="rounded-xl overflow-hidden border border-white/10 h-64 lg:h-auto">
-        <iframe title="Mapa - informacje o firmie Paintball Gang" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2778.7211965583206!2d18.02204197726761!3d54.71669297271833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fdc94ded7453af%3A0xc4565c910499dcf5!2sPaintball%20Gang%20Micha%C5%82%20Treder!5e1!3m2!1sen!2spl!4v1787597794218!5m2!1sen!2spl" class="w-full h-full grayscale contrast-[1.05] opacity-90" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      </div>
-    </div>
     <div class="grid lg:grid-cols-2 gap-10">
-      <!-- Contact Info (dojazd do pola) -->
-      <div class="bg-panel-light border border-white/10 rounded-xl p-8 space-y-5">
-        <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-sm">Dojazd do pola gry</span>
-        <div class="flex gap-4 items-start">
-          <i data-lucide="map-pin" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
-          <div>
-            <p class="font-display font-700 text-white uppercase text-base">Adres pola paintball</p>
-            <p class="text-gray-400 text-base">Lisewo 28, 84-250 Gniewino</p>
+      <!-- Lewa kolumna: obie karty jedna pod drugą -->
+      <div class="flex flex-col gap-10">
+        <!-- Contact Info (biuro) -->
+        <div class="bg-panel-light border border-white/10 rounded-xl p-8 space-y-5">
+          <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-sm">Informacje o firmie</span>
+          <div class="flex gap-4 items-start">
+            <i data-lucide="map-pin" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
+            <div>
+              <p class="font-display font-700 text-white uppercase text-base">Adres</p>
+              <p class="text-gray-400 text-base">Pomorska 63, 84-250 Gniewino</p>
+            </div>
           </div>
+          <div class="flex gap-4 items-start">
+            <i data-lucide="phone" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
+            <div>
+              <p class="font-display font-700 text-white uppercase text-base">Telefon</p>
+              <p class="text-gray-400 text-base">+48 533 084 320</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <i data-lucide="clock" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
+            <div>
+              <p class="font-display font-700 text-white uppercase text-base">Godziny otwarcia</p>
+              <p class="text-gray-400 text-base">Pon–Ndz: 9:00–20:00</p>
+            </div>
+          </div>
+          <a href="tel:+48533084320" class="w-full inline-flex items-center justify-center gap-2 bg-toxic text-black font-display font-700 text-lg uppercase tracking-wide py-4 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-lg">
+            <i data-lucide="phone" class="w-5 h-5"></i> Zadzwoń Teraz
+          </a>
         </div>
-        <p class="text-gray-400 text-base leading-relaxed">
-          Sama gra odbywa się na terenie dawnego poligonu wojskowego w Lisewie —
-          to inny adres niż biuro. Nawiguj bezpośrednio na Lisewo 28, żeby trafić na miejsce gry.
-        </p>
+        <!-- Contact Info (dojazd do pola) -->
+        <div class="bg-panel-light border border-white/10 rounded-xl p-8 space-y-5">
+          <span class="font-display font-600 text-toxic tracking-[0.3em] uppercase text-sm">Dojazd do pola gry</span>
+          <div class="flex gap-4 items-start">
+            <i data-lucide="map-pin" class="w-5 h-5 text-toxic mt-1 shrink-0"></i>
+            <div>
+              <p class="font-display font-700 text-white uppercase text-base">Adres pola paintball</p>
+              <p class="text-gray-400 text-base">Lisewo 28, 84-250 Gniewino</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-base leading-relaxed">
+            Sama gra odbywa się na terenie dawnego poligonu wojskowego w Lisewie —
+            to inny adres niż biuro. Nawiguj bezpośrednio na Lisewo 28, żeby trafić na miejsce gry.
+          </p>
+        </div>
       </div>
-      <!-- Map (dojazd do pola) -->
+      <!-- Prawa kolumna: mapa na całą wysokość obu kart -->
       <div class="rounded-xl overflow-hidden border border-white/10 h-64 lg:h-auto">
         <iframe title="Mapa dojazdu do pola paintball, Lisewo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2779.8464124561783!2d18.030511977266833!3d54.70027397271289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fdc9006b4bc94d%3A0x142dd2a48e4e762d!2sLetni%20Piknik%20Militarny%20%2F%20Lisewo!5e1!3m2!1sen!2spl!4v1787597701986!5m2!1sen!2spl" class="w-full h-full grayscale contrast-[1.05] opacity-90" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
