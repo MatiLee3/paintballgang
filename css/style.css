@@ -43,8 +43,12 @@ section[id] { scroll-margin-top: 88px; }
 
 .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
 
-.gallery-item img { transition: all 0.4s ease; filter: grayscale(60%) brightness(0.7); }
-.gallery-item:hover img { filter: grayscale(0%) brightness(1); transform: scale(1.08); }
+.gallery-item img { transition: filter 0.4s ease, transform 0.4s ease; }
+/* Przygaszenie miniatur tylko tam, gdzie da się najechać myszką; na telefonie zdjęcia są w pełnym kolorze */
+@media (hover: hover) {
+  .gallery-item img { filter: grayscale(60%) brightness(0.7); }
+  .gallery-item:hover img { filter: grayscale(0%) brightness(1); transform: scale(1.08); }
+}
 
 .lightbox {
   position: fixed;
@@ -142,7 +146,6 @@ section[id] { scroll-margin-top: 88px; }
 .h-20 { height: 5rem; }
 .h-64 { height: 16rem; }
 .h-96 { height: 24rem; }
-.h-\[550px\] { height: 550px; }
 .w-4 { width: 1rem; } .h-4 { height: 1rem; }
 .w-5 { width: 1.25rem; } .h-5 { height: 1.25rem; }
 .w-6 { width: 1.5rem; } .h-6 { height: 1.5rem; }
@@ -150,6 +153,7 @@ section[id] { scroll-margin-top: 88px; }
 .w-8 { width: 2rem; } .h-8 { height: 2rem; }
 .max-w-xs { max-width: 20rem; }
 .max-w-2xl { max-width: 42rem; }
+.max-w-3xl { max-width: 48rem; } /* opis w hero — brakowało tej reguły */
 .max-w-5xl { max-width: 64rem; }
 .max-w-7xl { max-width: 80rem; }
 .max-h-0 { max-height: 0; }
@@ -250,15 +254,15 @@ section[id] { scroll-margin-top: 88px; }
 .bg-toxic\/10 { background-color: rgba(57, 255, 20, 0.1); }
 .bg-olive\/10 { background-color: rgba(107, 142, 35, 0.1); }
 .bg-navy\/20 { background-color: rgba(30, 58, 95, 0.2); }
-.opacity-40 { opacity: 0.5; } /* 0.4 * 1.25 = jaśniejsze o 25% */
+.opacity-70 { opacity: 0.7; } /* zdjęcie w hero: wyraźnie widać zawodnika, tekst dalej czytelny */
 .opacity-90 { opacity: 0.9; }
 
 /* --- GRADIENTY (dokładne kombinacje użyte w HTML) --- */
-.bg-gradient-to-t.from-deep.via-deep\/80.to-deep\/40 {
-  background-image: linear-gradient(to top, #0a0e1a, rgba(10, 14, 26, 0.8), rgba(10, 14, 26, 0.4));
+.bg-gradient-to-t.from-deep.via-deep\/60.to-deep\/20 {
+  background-image: linear-gradient(to top, #0a0e1a, rgba(10, 14, 26, 0.6), rgba(10, 14, 26, 0.2));
 }
-.bg-gradient-to-r.from-deep\/90.via-transparent.to-deep\/90 {
-  background-image: linear-gradient(to right, rgba(10, 14, 26, 0.9), transparent, rgba(10, 14, 26, 0.9));
+.bg-gradient-to-r.from-deep\/80.via-transparent.to-deep\/80 {
+  background-image: linear-gradient(to right, rgba(10, 14, 26, 0.8), transparent, rgba(10, 14, 26, 0.8));
 }
 .bg-gradient-to-t.from-black.via-black\/40.to-transparent {
   background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.4), transparent);
@@ -424,3 +428,31 @@ section[id] { scroll-margin-top: 88px; }
    Menu jest ukryte na desktopie (xl:hidden), więc to nie dotyka
    zastrzeżonego wyglądu desktopowego. */
 #mobile-menu a { display: block; padding-block: 0.6rem; }
+
+/* ============================================================
+   ZDJĘCIA — paintball na pierwszym planie (aktualizacja galerii)
+================================================================ */
+
+/* Kadrowanie: przesunięcie widocznej części zdjęcia w kontenerze */
+.object-\[50\%_62\%\] { object-position: 50% 62%; }
+.object-\[30\%_50\%\] { object-position: 30% 50%; }
+.object-\[60\%_50\%\] { object-position: 60% 50%; }
+
+/* "O nas": na telefonie kwadrat zamiast wąskiego pionowego paska 550 px */
+.about-photo { aspect-ratio: 1 / 1; height: auto; }
+@media (min-width: 640px) { .about-photo { aspect-ratio: auto; height: 550px; } }
+
+/* Galeria: kwadratowe kafelki na telefonie, szerokie kafelki na 2 kolumny,
+   od 768 px stała wysokość wiersza 16rem (jak wcześniej) */
+.col-span-2 { grid-column: span 2 / span 2; }
+.gallery-item { aspect-ratio: 1 / 1; }
+.gallery-item.col-span-2 { aspect-ratio: 2 / 1; }
+@media (min-width: 768px) {
+  .gallery-item, .gallery-item.col-span-2 { aspect-ratio: auto; height: 16rem; }
+}
+
+/* Karty Tryby Gry: na ekranach dotykowych nie ma najechania, więc opis
+   trybu (dotąd widoczny tylko po hover) pokazuje się od razu */
+@media (hover: none) {
+  .group .max-h-0 { max-height: none; }
+}
