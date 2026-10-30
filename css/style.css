@@ -77,14 +77,6 @@ section[id] { scroll-margin-top: 88px; }
   border-radius: 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.lightbox__caption {
-  color: #fff;
-  font-family: 'Oswald', 'Arial Narrow', sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  text-align: center;
-  max-width: 40rem;
-}
 .lightbox__close {
   position: absolute;
   top: 1.5rem;
@@ -448,10 +440,4 @@ section[id] { scroll-margin-top: 88px; }
 .gallery-item.col-span-2 { aspect-ratio: 2 / 1; }
 @media (min-width: 768px) {
   .gallery-item, .gallery-item.col-span-2 { aspect-ratio: auto; height: 16rem; }
-}
-
-/* Karty Tryby Gry: na ekranach dotykowych nie ma najechania, więc opis
-   trybu (dotąd widoczny tylko po hover) pokazuje się od razu */
-@media (hover: none) {
-  .group .max-h-0 { max-height: none; }
 }
