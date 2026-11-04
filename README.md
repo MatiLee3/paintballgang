@@ -21,7 +21,8 @@ No dependencies, no package manager, no build process — just static files.
 │   └── icons.js
 ├── assets/
 │   └── photos/
-│       └── thumbs/
+│       ├── thumbs/
+│       └── films/
 ├── robots.txt
 └── sitemap.xml
 ```

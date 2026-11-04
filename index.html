@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paintball Gang | Paintball i Integracje Firmowe – Gniewino, Pomorskie</title>
 <meta name="description" content="Paintball Gniewino, Reda, Wejherowo, Trójmiasto – gry taktyczne, integracje firmowe i wieczory kawalerskie. Paintball Gang, rezerwacja: 533 084 320.">
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 <script src="js/icons.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -247,6 +247,29 @@
   </div>
 </section>
 
+<!-- SECTION: FILMY -->
+<section class="pb-24 bg-deep" aria-labelledby="filmy">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <h2 id="filmy" class="galeria-heading font-display font-600 text-toxic tracking-[0.3em] uppercase">Filmy</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-4">
+      <button type="button" class="video-item rounded-lg" data-video="assets/photos/films/film1.mp4" aria-label="Odtwórz film 1">
+        <video src="assets/photos/films/film1.mp4#t=0.1" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+        <span class="video-item__play" aria-hidden="true"><i data-lucide="play" class="w-6 h-6"></i></span>
+      </button>
+      <button type="button" class="video-item rounded-lg" data-video="assets/photos/films/film2.mp4" aria-label="Odtwórz film 2">
+        <video src="assets/photos/films/film2.mp4#t=0.1" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+        <span class="video-item__play" aria-hidden="true"><i data-lucide="play" class="w-6 h-6"></i></span>
+      </button>
+      <button type="button" class="video-item rounded-lg" data-video="assets/photos/films/film3.mp4" aria-label="Odtwórz film 3">
+        <video src="assets/photos/films/film3.mp4#t=0.1" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+        <span class="video-item__play" aria-hidden="true"><i data-lucide="play" class="w-6 h-6"></i></span>
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- SECTION: OPINIE & FAQ -->
 <section id="faq" class="py-24 bg-panel">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
@@ -388,6 +411,14 @@
   <img id="lightboxImg" class="lightbox__img" src="" alt="">
 </div>
 
+<!-- LIGHTBOX FILMÓW -->
+<div id="videoLightbox" class="lightbox lightbox--interactive" role="dialog" aria-modal="true" aria-label="Odtwarzacz filmu" aria-hidden="true">
+  <button id="videoLightboxClose" class="lightbox__close" aria-label="Zamknij film">
+    <i data-lucide="x" class="w-6 h-6"></i>
+  </button>
+  <video id="videoLightboxPlayer" class="lightbox__video" controls playsinline preload="none"></video>
+</div>
+
 <script>
   lucide.createIcons();
 
@@ -477,6 +508,40 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });
+  })();
+
+  // Filmy — po kliknięciu (komputer i telefon) film otwiera się na całym ekranie, jak zdjęcia w galerii
+  (function () {
+    const box = document.getElementById('videoLightbox');
+    const player = document.getElementById('videoLightboxPlayer');
+    const closeBtn = document.getElementById('videoLightboxClose');
+    let opener = null;
+
+    function openVideo(item) {
+      opener = item;
+      player.src = item.dataset.video;
+      box.classList.add('is-active');
+      box.setAttribute('aria-hidden', 'false');
+      setTimeout(() => closeBtn.focus({ preventScroll: true }), 50);  // nakładka jest widoczna dopiero w następnej klatce
+      player.play().catch(() => {});  // gdy przeglądarka zablokuje autostart, zostają przyciski odtwarzacza
+    }
+
+    function closeVideo() {
+      if (!box.classList.contains('is-active')) return;
+      player.pause();
+      player.removeAttribute('src');
+      player.load();                   // przerywa pobieranie filmu po zamknięciu
+      box.classList.remove('is-active');
+      box.setAttribute('aria-hidden', 'true');
+      if (opener) opener.focus({ preventScroll: true });
+    }
+
+    document.querySelectorAll('.video-item').forEach(item => {
+      item.addEventListener('click', () => openVideo(item));
+    });
+    closeBtn.addEventListener('click', closeVideo);
+    box.addEventListener('click', (e) => { if (e.target === box) closeVideo(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideo(); });
   })();
 </script>
 </body>
